@@ -1,0 +1,798 @@
+/* ========================= GLOBAL ========================= */
+:root {
+    --primary-color: #FF9F1C;   
+    --secondary-color: #FFBF69; 
+    --bg-color: #FFF4E6;        
+    --text-color: #2EC4B6;      
+    --dark-text: #333333;
+    --card-bg: rgba(255, 255, 255, 0.90);
+    --shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Fredoka', Arial, sans-serif;
+    
+    /* ✅ 背景設定：使用 background.png */
+    background-color: var(--bg-color);
+    background-image: url("images/background.png"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: var(--dark-text);
+}
+
+.screen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s;
+}
+
+.hidden {
+    display: none !important;
+    opacity: 0;
+}
+
+/* ========================= CARDS & UTILS ========================= */
+.card {
+    background: var(--card-bg);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+    border: 4px solid white;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 15px 50px;
+    font-size: 28px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    box-shadow: 0 6px 0 #E08E0B;
+    transition: transform 0.1s, box-shadow 0.1s;
+    margin-top: 20px;
+}
+
+.primary-btn:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 0 #E08E0B;
+}
+
+/* ========================= START SCREEN ========================= */
+/* ========================= GLOBAL ========================= */
+:root {
+    --primary-color: #FF9F1C;   
+    --secondary-color: #FFBF69; 
+    --bg-color: #FFF4E6;        
+    --text-color: #2EC4B6;      
+    --dark-text: #333333;
+    --card-bg: rgba(255, 255, 255, 0.90);
+    --shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Fredoka', Arial, sans-serif;
+    
+    /* ✅ 背景設定：使用 background.png */
+    background-color: var(--bg-color);
+    background-image: url("images/background.png"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: var(--dark-text);
+}
+
+.screen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s;
+}
+
+.hidden {
+    display: none !important;
+    opacity: 0;
+}
+
+/* ========================= CARDS & UTILS ========================= */
+.card {
+    background: var(--card-bg);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+    border: 4px solid white;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 15px 50px;
+    font-size: 28px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    box-shadow: 0 6px 0 #E08E0B;
+    transition: transform 0.1s, box-shadow 0.1s;
+    margin-top: 20px;
+}
+
+.primary-btn:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 0 #E08E0B;
+}
+
+/* ========================= START SCREEN ========================= */
+.start-card h1 {
+    font-size: 80px;
+    color: var(--primary-color);
+    margin: 0;
+    text-shadow: 2px 2px 0px #fff;
+}
+
+.statusBox {
+    font-size: 24px;
+    background: #eee;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+.subtitle {
+    font-size: 24px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.hint {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #999;
+}
+
+/* ========================= GAME UI ========================= */
+.topBar {
+    width: 90%;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.info-pill {
+    background: white;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-size: 28px;
+    font-weight: bold;
+    box-shadow: 0 4px 0 rgba(0,0,0,0.1);
+    border: 2px solid var(--primary-color);
+}
+
+.dishCard {
+    width: 90%;
+    max-width: 800px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 6px solid #e0e0e0;
+}
+
+.dish-header h2 {
+    margin: 0 0 10px 0;
+    font-size: 32px;
+    color: var(--primary-color);
+}
+
+.dish-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    justify-content: center;
+}
+
+#dishImg {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 4px rgba(0,0,0,0.2));
+}
+
+.ingredients-container p {
+    margin: 0 0 10px 0;
+    font-weight: bold;
+    color: #888;
+}
+
+#neededIngredients {
+    display: flex;
+    gap: 15px;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#neededIngredients img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    opacity: 0.3;
+    filter: grayscale(100%);
+    transition: 0.3s;
+}
+
+#neededIngredients img.collected {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+.instruction {
+    font-size: 24px;
+    color: #333;
+    margin: 10px;
+    text-shadow: 1px 1px 0 #fff;
+    animation: bounce 2s infinite;
+}
+
+/* ========================= GRID ========================= */
+#grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 450px;
+    height: 450px;
+    margin: 0 auto;
+}
+
+.cell {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 16px;
+    position: relative;
+    box-shadow: 0 4px 0 rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: 0.2s;
+    border: 3px solid transparent;
+    overflow: hidden;
+}
+
+.cell:active {
+    transform: scale(0.95);
+}
+
+.cell img {
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+}
+
+.correct-flash {
+    background-color: #d4edda !important;
+    border-color: #28a745 !important;
+    animation: pop 0.3s ease-out;
+}
+
+.wrong-flash {
+    background-color: #f8d7da !important;
+    border-color: #dc3545 !important;
+    animation: shake 0.4s ease-in-out;
+}
+
+/* ========================= COMPLETED LIST (In Game) ========================= */
+.completed-section {
+    margin-top: 10px;
+    text-align: center;
+}
+.completed-section h3 {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #666;
+}
+#completed img {
+    width: 60px;
+    margin: 0 5px;
+    filter: drop-shadow(0 2px 2px rgba(0,0,0,0.2));
+}
+
+/* ========================= END SCREEN (New Horizontal Layout) ========================= */
+
+.end-panel {
+    max-width: 900px;
+    width: 95%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.end-panel h1 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* 核心佈局：左右並排容器 */
+.end-body-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+/* 左側：分數盒子 */
+.final-score-box {
+    background: #FFF8E1;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    min-width: 220px;
+    flex-shrink: 0;
+    border: 4px solid #ffe082;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.final-score-box p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #bfa368;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.final-score-box h2 {
+    font-size: 90px;
+    margin: 5px 0 0 0;
+    color: var(--primary-color);
+    line-height: 1;
+    text-shadow: 2px 2px 0px white;
+}
+
+/* 右側：料理展示區 */
+.dishes-container {
+    flex-grow: 1;
+    background: rgba(255,255,255,0.6);
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px dashed #ddd;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dishes-container h3 {
+    margin-top: 0;
+    color: #888;
+    font-size: 18px;
+}
+
+/* 料理列表橫向排列 */
+.dishList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+}
+
+.dishList .item {
+    background: white;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 100px;
+    transition: transform 0.2s;
+}
+
+.dishList .item:hover {
+    transform: translateY(-5px);
+}
+
+.dishList img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 5px;
+}
+
+.dishList .item div {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    background: #eee;
+    border-radius: 10px;
+    padding: 2px 8px;
+    display: inline-block;
+}
+
+/* RWD: 手機直向時自動變回直排 */
+@media (max-width: 768px) {
+    .end-body-row {
+        flex-direction: column;
+    }
+}
+
+/* ========================= ANIMATIONS ========================= */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px) rotate(-5deg); }
+    50% { transform: translateX(5px) rotate(5deg); }
+    75% { transform: translateX(-5px) rotate(-5deg); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
+.statusBox {
+    font-size: 24px;
+    background: #eee;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+.subtitle {
+    font-size: 24px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.hint {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #999;
+}
+
+/* ========================= GAME UI ========================= */
+.topBar {
+    width: 90%;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.info-pill {
+    background: white;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-size: 28px;
+    font-weight: bold;
+    box-shadow: 0 4px 0 rgba(0,0,0,0.1);
+    border: 2px solid var(--primary-color);
+}
+
+.dishCard {
+    width: 90%;
+    max-width: 800px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 6px solid #e0e0e0;
+}
+
+.dish-header h2 {
+    margin: 0 0 10px 0;
+    font-size: 32px;
+    color: var(--primary-color);
+}
+
+.dish-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    justify-content: center;
+}
+
+#dishImg {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 4px rgba(0,0,0,0.2));
+}
+
+.ingredients-container p {
+    margin: 0 0 10px 0;
+    font-weight: bold;
+    color: #888;
+}
+
+#neededIngredients {
+    display: flex;
+    gap: 15px;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#neededIngredients img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    opacity: 0.3;
+    filter: grayscale(100%);
+    transition: 0.3s;
+}
+
+#neededIngredients img.collected {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+.instruction {
+    font-size: 24px;
+    color: #333;
+    margin: 10px;
+    text-shadow: 1px 1px 0 #fff;
+    animation: bounce 2s infinite;
+}
+
+/* ========================= GRID ========================= */
+#grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 450px;
+    height: 450px;
+    margin: 0 auto;
+}
+
+.cell {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 16px;
+    position: relative;
+    box-shadow: 0 4px 0 rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: 0.2s;
+    border: 3px solid transparent;
+    overflow: hidden;
+}
+
+.cell:active {
+    transform: scale(0.95);
+}
+
+.cell img {
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+}
+
+.correct-flash {
+    background-color: #d4edda !important;
+    border-color: #28a745 !important;
+    animation: pop 0.3s ease-out;
+}
+
+.wrong-flash {
+    background-color: #f8d7da !important;
+    border-color: #dc3545 !important;
+    animation: shake 0.4s ease-in-out;
+}
+
+/* ========================= COMPLETED LIST (In Game) ========================= */
+.completed-section {
+    margin-top: 10px;
+    text-align: center;
+}
+.completed-section h3 {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #666;
+}
+#completed img {
+    width: 60px;
+    margin: 0 5px;
+    filter: drop-shadow(0 2px 2px rgba(0,0,0,0.2));
+}
+
+/* ========================= END SCREEN (New Horizontal Layout) ========================= */
+
+.end-panel {
+    max-width: 900px;
+    width: 95%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.end-panel h1 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* 核心佈局：左右並排容器 */
+.end-body-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+/* 左側：分數盒子 */
+.final-score-box {
+    background: #FFF8E1;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    min-width: 220px;
+    flex-shrink: 0;
+    border: 4px solid #ffe082;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.final-score-box p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #bfa368;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.final-score-box h2 {
+    font-size: 90px;
+    margin: 5px 0 0 0;
+    color: var(--primary-color);
+    line-height: 1;
+    text-shadow: 2px 2px 0px white;
+}
+
+/* 右側：料理展示區 */
+.dishes-container {
+    flex-grow: 1;
+    background: rgba(255,255,255,0.6);
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px dashed #ddd;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dishes-container h3 {
+    margin-top: 0;
+    color: #888;
+    font-size: 18px;
+}
+
+/* 料理列表橫向排列 */
+.dishList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+}
+
+.dishList .item {
+    background: white;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 100px;
+    transition: transform 0.2s;
+}
+
+.dishList .item:hover {
+    transform: translateY(-5px);
+}
+
+.dishList img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 5px;
+}
+
+.dishList .item div {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    background: #eee;
+    border-radius: 10px;
+    padding: 2px 8px;
+    display: inline-block;
+}
+
+/* RWD: 手機直向時自動變回直排 */
+@media (max-width: 768px) {
+    .end-body-row {
+        flex-direction: column;
+    }
+}
+
+/* ========================= ANIMATIONS ========================= */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px) rotate(-5deg); }
+    50% { transform: translateX(5px) rotate(5deg); }
+    75% { transform: translateX(-5px) rotate(-5deg); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}

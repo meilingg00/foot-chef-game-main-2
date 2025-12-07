@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foot Chef</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <audio id="sndCorrect" src="audio/correct.mp3"></audio>
+    <audio id="sndWrong" src="audio/wrong.mp3"></audio>
+    <audio id="sndWin" src="audio/win.mp3"></audio>
+
+    <div id="startScreen" class="screen">
+        <div class="card start-card">
+            <h1 class="title">FOOT CHEF 👨‍🍳</h1>
+            
+            <div class="statusBox">
+                Smart Floor: <span id="connIcon">❌</span>
+            </div>
+
+            <p class="subtitle">Step (or Click) to Cook!</p>
+
+            <button id="startBtn" class="primary-btn">
+                START GAME
+            </button>
+
+            <p class="hint">You can play with mouse or smart mat.</p>
+        </div>
+    </div>
+
+    <div id="gameScreen" class="screen hidden">
+
+        <div class="topBar">
+            <div class="info-pill timer-pill">
+                🕒 <span id="timer">20</span>s
+            </div>
+            <div class="info-pill score-pill">
+                ⭐ <span id="score">0</span>
+            </div>
+        </div>
+
+        <div class="dishCard">
+            <div class="dish-header">
+                <h2 id="dishName">Loading...</h2>
+            </div>
+            
+            <div class="dish-content">
+                <img id="dishImg" src="" alt="Target Dish">
+                
+                <div class="ingredients-container">
+                    <p>Find these ingredients:</p>
+                    <div id="neededIngredients"></div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="instruction">👇 Tap the correct ingredient!</h3>
+
+        <div id="grid">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+
+        <div class="completed-section">
+            <h3>Completed Dishes</h3>
+            <div id="completed"></div>
+        </div>
+
+    </div>
+
+    <div id="endScreen" class="screen hidden">
+        <div class="card end-panel">
+            <h1>🍴 SERVICE FINISHED!</h1>
+
+            <div class="end-body-row">
+                
+                <div class="final-score-box">
+                    <p>FINAL SCORE</p>
+                    <h2 id="finalScore">0</h2>
+                </div>
+
+                <div class="dishes-container">
+                    <h3>You Cooked:</h3>
+                    <div id="finalDishes" class="dishList"></div>
+                </div>
+
+            </div>
+
+            <button id="playAgainBtn" class="primary-btn">
+                COOK AGAIN
+            </button>
+        </div>
+    </div>
+
+    <script src="firebase-config.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
