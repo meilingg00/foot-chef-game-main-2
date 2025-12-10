@@ -15,24 +15,25 @@
     <audio id="sndWin" src="audio/win.mp3"></audio>
 
     <div id="startScreen" class="screen">
-        <div class="card start-card">
-            <h1 class="title">FOOT CHEF 👨‍🍳</h1>
+        
+        <div class="menu-container">
+            <img src="images/banner.png" alt="Board" class="board-img">
+            <img src="images/knife.png" alt="Knife" class="decor-knife">
+            <h1 class="game-title">FOOT CHEF</h1>
             
-            <div class="statusBox">
-                Smart Floor: <span id="connIcon">❌</span>
+            <div id="startBtn" class="pan-button" onclick="startGame()">
+                <img src="images/pan.png" alt="Start" class="pan-img">
+                <span class="start-text">Start</span>
             </div>
-
-            <p class="subtitle">Step (or Click) to Cook!</p>
-
-            <button id="startBtn" class="primary-btn">
-                START GAME
-            </button>
-
-            <p class="hint">You can play with mouse or smart mat.</p>
         </div>
-    </div>
 
-    <div id="gameScreen" class="screen hidden">
+        <div class="footer-msg">
+            You can play with mouse or smart mat.
+            <br>
+            <span class="status-text">Smart Floor: <span id="connIcon">❌</span></span>
+        </div>
+
+    </div> <div id="gameScreen" class="screen hidden">
 
         <div class="topBar">
             <div class="info-pill timer-pill">
@@ -80,28 +81,26 @@
     </div>
 
     <div id="endScreen" class="screen hidden">
-        <div class="card end-panel">
-            <h1>🍴 SERVICE FINISHED!</h1>
+    <div class="end-panel">
+        
+        <h2 class="service-title">🍴 SERVICE FINISHED!</h2>
 
-            <div class="end-body-row">
-                
-                <div class="final-score-box">
-                    <p>FINAL SCORE</p>
-                    <h2 id="finalScore">0</h2>
-                </div>
+        <div class="end-body-row">
+            
+            <div class="final-score-box">
+                <span class="score-label">FINAL SCORE</span>
+                <h1 id="finalScoreDisplay">240</h1> </div>
 
-                <div class="dishes-container">
-                    <h3>You Cooked:</h3>
-                    <div id="finalDishes" class="dishList"></div>
-                </div>
-
+            <div class="dishes-container">
+                <span class="cooked-label">You Cooked:</span>
+                <div class="dishList" id="finalDishList"></div>
             </div>
 
-            <button id="playAgainBtn" class="primary-btn">
-                COOK AGAIN
-            </button>
         </div>
+
+        <button class="restart-btn" onclick="location.reload()">COOK AGAIN</button>
     </div>
+</div>
 
     <script src="firebase-config.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
